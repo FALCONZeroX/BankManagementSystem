@@ -1,107 +1,99 @@
-# 🏦 Bank Simple System
+# 🏦 Bank Simple System - C++
 
-## 📌 Overview
-A simple **Bank Management System** implemented in **C++** that demonstrates core programming concepts such as:
-- File handling
-- Data structures
-- Modular design
-- Problem solving
+![C++](https://img.shields.io/badge/C++-Solutions-blue.svg?style=flat&logo=c%2B%2B)
+![Year](https://img.shields.io/badge/Year-2026-green)
+![Author](https://img.shields.io/badge/Created%20By-FALCON-orange)
 
-The system simulates basic banking operations like managing clients, transactions, and account balances.
+A comprehensive and lightweight banking management system built with **C++**. This project focuses on managing client data and system users through a robust permissions-based architecture.
 
----
-
-## 🚀 Features
-- ➕ Add new clients
-- 🔍 Search for client accounts
-- ✏️ Update client information
-- ❌ Delete client accounts
-- 💰 Deposit money
-- 💸 Withdraw money
-- 📊 View all clients
+This project is a personal implementation as part of **Course 8** in the programming series by **Dr. Mohammed Abu-Hadhoud**.
 
 ---
 
-## 🛠️ Technologies Used
-- Language: **C++**
-- Paradigm: Procedural Programming
-- Storage: File-based system (no database)
+## 🚀 Key Features
+
+The system is divided into several modules ensuring secure and efficient management:
+
+### 1. User Management & Permissions
+* **Secure Login:** Features a login screen requiring a username and password with a maximum of 3 attempts before being blocked.
+* **Granular Permissions:** Specific access can be granted for each user, including:
+    * Show Clients
+    * Add/Delete/Update Clients
+    * Find Clients
+    * Transactions
+    * User Management
+* **Admin Protection:** Built-in safeguards prevent the deletion or modification of the 'Admin' user or the currently logged-in user.
+
+### 2. Client Management
+* **Add New Clients:** Allows creating new records while validating that Account Numbers are unique.
+* **Update & Delete:** Support for modifying client details or performing "Soft Deletes" to maintain data integrity.
+* **Advanced Search:** Find clients instantly using their Account Number or Name.
+
+### 3. Transaction Module
+* **Deposit & Withdraw:** Handle financial operations with real-time balance updates.
+* **Balance Validation:** Ensures clients have sufficient credit before allowing withdrawals.
+* **Total Balances Report:** Generates a summarized report of all client balances in the system.
+
+### 4. Data Persistence
+* **File-Based Storage:** Automatically saves and loads data from text files (`.txt`), ensuring data is preserved after the program closes.
 
 ---
 
-## 📂 Project Structure
-```
-BankSimpleSystem.cpp   # Main source code
-README.md              # Project documentation
-```
+## ⚠️ Important Setup Instructions (Prerequisites)
+
+To ensure the program runs successfully without errors, please follow these steps:
+
+1.  **Mandatory Files:** You must download or create the following files:
+    * `Clients.txt`
+    * `Users.txt`
+2.  **File Path:** These files **MUST** be placed in the same directory as the project source code or the executable file. 
+3.  **Automatic Loading:** The system is designed to read from these files immediately upon startup.
 
 ---
 
-## ⚙️ How to Run
-1. Make sure you have a C++ compiler installed (e.g., g++)
-2. Compile the project:
-```bash
-g++ BankSimpleSystem.cpp -o bank_system
-```
-3. Run the program:
-```bash
-./bank_system
-```
+## 🛠 Technical Stack & Concepts
+
+* **Vectors & Structs:** Used for dynamic data management in memory.
+* **File Handling (fstream):** For persistent data storage and retrieval.
+* **Enums:** To manage application states, read modes, and navigation.
+* **Header ASCII Art:** Custom-designed "FALCON" branding in the source code.
 
 ---
 
-## 📸 Sample Workflow
-1. Start the program
-2. Choose an operation from the menu
-3. Enter required data (account number, name, balance, etc.)
-4. Perform transactions
+## ⚠️ Current Limitations
+
+While the system is functional for educational purposes, it currently has the following limitations:
+
+* **File System Dependency**: The program relies on flat `.txt` files, which may face performance issues as the data size grows significantly.
+* **Concurrency**: The system does not support multiple users accessing or writing to the database files simultaneously.
+* **Security**: Data in `Users.txt` and `Clients.txt` is stored in plain text, which is not suitable for real-world sensitive financial information.
+* **Console-Based UI**: The interface is limited to the Windows Command Prompt, utilizing `system("cls")` and `system("color")`, which limits cross-platform compatibility.
+* **No Transaction History**: While the balance updates, the system does not currently log a history of individual deposits or withdrawals.
 
 ---
 
-## ⚠️ Limitations
-- No graphical user interface (CLI only)
-- No authentication system
-- File-based storage may not scale well
+## 🛠 Future Improvements (Roadmap)
+
+To evolve this project into a more robust application, the following enhancements are planned:
+
+* **Database Integration**: Transition from `.txt` files to a relational database like **SQLite** or **MySQL** for better data management and scalability.
+* **Data Encryption**: Implement hashing algorithms (like SHA-256) for passwords and encryption for sensitive client data to enhance security.
+* **Graphical User Interface (GUI)**: Develop a modern interface using frameworks like **Qt** or **SFML** to replace the current console design.
+* **Transaction Logs**: Add a feature to record every transaction (Date, Time, Amount, Type) into a dedicated `Log.txt` file for auditing.
+* **Networking**: Implement a Client-Server architecture to allow the system to be accessed over a local network.
+* **Advanced Reports**: Add the ability to export reports in different formats like CSV or PDF for professional use.
 
 ---
 
-## 💡 Future Improvements
-- Add user authentication (Admin/User roles)
-- Implement database (MySQL / SQLite)
-- Build GUI (Qt / Web Interface)
-- Improve error handling and validation
 
 ---
 
-## 📢 Important Notes
-⚠️ To run the program correctly, you must:
-- Download the following files:
-  - `Clients.txt`
-  - `Users.txt`
-- Place these files in the **same directory as the project (same folder as the executable or source code)**.
-
-📌 The program reads these files directly at startup, and it will not work properly without them.
-
----
-
-## 🎓 Course Attribution
-This project is **my own work**, developed as part of my learning journey.
-
-✔️ Completed during:
-**Course 8 – Programming Advices Track**  
-Instructor: **Dr. Mohammad Abu Hadhoud**
-
-📌 All project details were implemented based on my personal understanding and practical application of the course material.
-
----
-
-## 👨‍💻 Author
+## 👨‍💻 Developed By
 **Falah Fathel (FALCON)**
-
-- IT Student  
-- Passionate about programming and problem solving  
+* **Year:** 2026
+* **Educational Reference:** Course 8 - Dr. Mohammed Abu-Hadhoud
 
 ---
 
-## 📄 License
-This project is open-source and available for learning purposes.
+### 📝 License
+This project is intended for educational purposes and to demonstrate proficiency in C++ programming logic.

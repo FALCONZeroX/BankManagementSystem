@@ -74,7 +74,7 @@ To run the program successfully, ensure the following:
 ---
 
 ## 👨‍💻 Developed By
-**Falah Fathel (FALCON)**
+**FALAH FATHEL (FALCON)**
 * **Year:** 2026
 * **Educational Reference:** Course 8 - Dr. Mohammed Abu-Hadhoud
 

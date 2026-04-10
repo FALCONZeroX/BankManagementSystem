@@ -1,4 +1,6 @@
-![Bank Management System Banner](./banner.jpg)
+<p align="center">
+  <img src="./banner.jpg" alt="Bank Management System Banner" width="100%" />
+</p>
 
 # 🏦 Bank Management System FP (Functional Programming) - C++
 
